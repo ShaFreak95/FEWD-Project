@@ -1,3 +1,225 @@
 body {
     margin: 0;
+    font-family: "Urbanist", sans-serif;;
+}
+
+footer {
+    background-color: black;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    color: white;
+}
+
+/* ======================================Styling================================================ */
+
+.flex {
+    display: flex;
+}
+
+/* ======================================Nav Header================================================ */
+
+.center-nav {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.center-nav a {  
+    color: black;
+    font-family: "Lobster", cursive;
+    font-size: 60px;
+    text-decoration: none;
+}
+
+.center-nav a:hover {
+    color: #0af392;
+}
+
+.mobile-bar {
+    display: none;
+}
+
+.right-nav {
+    align-items: center;
+    justify-content: flex-end;
+    width: 80%;
+}
+
+.right-nav a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.right-nav a:hover {
+    color: #0af392;
+    text-decoration: underline;
+}
+
+.right-nav-list {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+/* ---------------------Img Container---------------------------- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;  
+}
+
+.img-container{
+    position: relative;
+}
+
+.img > img {
+    width: 100%;
+}
+
+.img-container > .img-title-header {
+    position: absolute;
+    background-color: rgb(220 220 220 / 50%); /* Create a transparent-like box */
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 10%;
+}
+
+.img-container > .img-title-header > h1 {
+    text-align: center;
+}
+
+/* .img img {
+    width: 20rem;
+} */
+
+/* ---------------------Middle Section---------------------------- */
+
+.about-me-container {
+    text-align: center;
+}
+
+.about-me-box {
+    /* background-color: black; */
+    width: 600px;
+    height: 300px;
+}
+
+.about-me-box .icon {
+    font-size: 150px;
+}
+
+.about-me-box .icon:hover {
+    color: violet;
+}
+
+/* **************************Responsice Website************************** */
+/* Mobile */
+
+@media (min-width: 300px) and (max-width: 650px) {
+    .center-nav {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 0.5rem;
+    }
+
+    #mobile-bar-cta {
+        font-size: 1.5rem;
+    }
+
+    .right-nav {
+        display: none;
+    }
+    
+    .right-nav a {
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .right-nav-list {
+        display: flex;
+        justify-content: space-evenly;
+        width: 60%;
+    }
+
+    /* ---------------------Img Container---------------------------- */
+    .grid-mobile {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .img {
+        text-align: center;
+    }
+
+    .img img {
+        height: 20rem;
+    }
+
+    .img-2, .img-3 {
+        display: none;
+    }
+
+    /* ---------------------Middle Section---------------------------- */
+
+    .about-me-box {
+        /* background-color: black; */
+        width: 100%;
+        height: 10rem;
+    }
+
+    .about-me-box .icon {
+        font-size: 5rem;
+    }
+}
+
+/* Tablet */
+
+@media (max-width: 1024px) {
+    .center-nav {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 0.5rem;
+    }
+
+    #mobile-bar-cta {
+        font-size: 1.5rem;
+    }
+
+    .right-nav {
+        display: none;
+    }
+
+    /* ---------------------Img Container---------------------------- */
+    .grid-mobile {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .img img {
+        width: 20rem;
+    }
+
+    .img-2, .img-3 {
+        display: none;
+    }
 }
