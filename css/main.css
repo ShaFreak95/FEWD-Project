@@ -202,6 +202,14 @@ footer p{
 
 @media (min-width: 300px) and (max-width: 650px) {
     /* Menu Responsive */
+    .show-menu {
+        animation: showMenu 1s ease-out;
+    }
+
+    .hide-menu {
+        animation: hideMenu .5s ease-out;
+    }
+
     .mobile-menu-container {
         background-color: white;;
         display: none;
@@ -358,5 +366,27 @@ footer p{
 
     .img-2, .img-3 {
         display: none;
+    }
+}
+
+/* *********************Animation****************************** */
+
+@keyframes showMenu {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+@keyframes hideMenu {
+    0% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 0%;
     }
 }

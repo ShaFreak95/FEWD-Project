@@ -315,7 +315,15 @@ header {
   @media (max-width:1100px) {
     /* Footer */
 
-    /* Menu Responsive */
+  /* Menu Responsive */
+    .show-menu {
+      animation: showMenu 1s ease-out;
+  }
+
+  .hide-menu {
+      animation: hideMenu .5s ease-out;
+  }
+
   .mobile-menu-container {
     background-color: white;;
     display: none;
@@ -460,3 +468,25 @@ header {
         padding-bottom: 1rem;
     }
    }
+
+/* *********************Animation****************************** */
+
+@keyframes showMenu {
+  0% {
+      opacity: 0%;
+  }
+
+  100% {
+      opacity: 100%;
+  }
+}
+
+@keyframes hideMenu {
+  0% {
+      opacity: 100%;
+  }
+
+  100% {
+      opacity: 0%;
+  }
+}
