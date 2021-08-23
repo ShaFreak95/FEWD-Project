@@ -133,6 +133,17 @@ footer p{
     color: #44f8ff;
 }
 
+/* ****************************Contact Page**************************** */
+
+.form {
+    margin-left: 0.5rem;
+}
+
+#message {
+    height: 9rem;
+    width: 90%;
+}
+
 /* ****************************Fun Game Page**************************** */
 .game-header {
     text-align: center;

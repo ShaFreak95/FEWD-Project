@@ -7,6 +7,9 @@
     <title>Contact Me</title>
     <!-- CSS File -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
     <!-- Google Font -->
     <!-- Lobster Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,8 +21,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Urbanist&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section>
-        <nav class="mobile-menu-container">
+    <section class="mobile-menu-container">
+        <nav class="mobile-menu">
             <a href="index.html">Home</a>
             <a href="resume.html">Resume</a>
             <a href="contact.html">Contact</a>
@@ -55,13 +58,14 @@
             <h3>E-mail:</h3>
             <input type="text" id="email" name="email" placeholder="example@mail.com"/><br />
             <h3>Message:</h3>
-            <textarea name="message" id="" cols="50" rows="20" placeholder="Write your messages here..."></textarea><br />
+            <textarea id="message" name="message" id="" cols="50" rows="20" placeholder="Write your messages here..."></textarea><br />
             <input type="submit" value="Submit">    
 
         </form>
     </section>
     <footer>
         <p>©2021 by Shafiq Akiya</p>
-    </footer>   
+    </footer> 
+<script src="js/main.js"></script>  
 </body>
 </html>
