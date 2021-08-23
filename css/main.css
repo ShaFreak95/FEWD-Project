@@ -4,6 +4,9 @@ body {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     background-color: black;
     display: flex;
     height: 60px;
@@ -101,13 +104,17 @@ footer p{
 
 /* ---------------------Middle Section---------------------------- */
 
+.middle-section {
+    text-align: center;
+}
+
 .about-me-container {
     text-align: center;
 }
 
 .about-me-box {
     /* background-color: black; */
-    width: 600px;
+    width: 400px;
     height: 300px;
 }
 
@@ -184,11 +191,21 @@ footer p{
     .about-me-box .icon {
         font-size: 5rem;
     }
+
+    .about-me-box .icon:hover {
+        color: violet;
+    }
+
+    .middle-section {
+        margin-bottom: 2rem;
+    }
 }
 
 /* Tablet */
 
 @media (max-width: 1024px) {
+    
+
     .center-nav {
         justify-content: center;
         width: 100%;

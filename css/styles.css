@@ -11,7 +11,50 @@ body {
     height: 60px;
     justify-content: center;
     align-items: center;
+    padding: 20px 0 20px;
 }
+
+footer a {
+    color: white;
+}
+
+footer p {
+    color: white;
+}
+
+h1 {
+    color: #66BFBF;
+    font-family: 'Sacramento', cursive;
+    font-size: 5.625rem; /* 100% means the default size is 16px / as for 'em', means M therefore the size of 1em is 16px*/
+    margin: 50px auto 0 auto;
+  }
+  
+  h2 {
+    color: #66BFBF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  
+  h3 {
+    color: #11999E;
+    font-family: helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+  
+  hr {
+    border: 6px dotted grey;
+    border-bottom: none;
+    width: 4%;
+    margin: 80px auto;
+  }
+  
+  p {
+    color: #40514e;
+    line-height: 2;
+  }
 
 /* ======================================Styling================================================ */
 
@@ -77,10 +120,13 @@ body {
     left: 300px;
     bottom: 300px;
   }
+
+  /* Profile Section */
   
   .profile-description {
     display: inline-block;
-    width: 30%;
+    font-size: 1.5rem;
+    width: 50%;
   }
   
   .profile-pic {
@@ -88,44 +134,17 @@ body {
     height: 200px;
     width: 200px;
   }
+
+  /* Skills */
   
   .skill-row {
     margin: 100px auto 100px auto;
     width: 50%;
     text-align: left;
   }
-  
-  h1 {
-    color: #66BFBF;
-    font-family: 'Sacramento', cursive;
-    font-size: 5.625rem; /* 100% means the default size is 16px / as for 'em', means M therefore the size of 1em is 16px*/
-    margin: 50px auto 0 auto;
-  }
-  
-  h2 {
-    color: #66BFBF;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    font-weight: bold;
-    padding-bottom: 10px;
-  }
-  
-  h3 {
-    color: #11999E;
-    font-family: helvetica, sans-serif;
-    line-height: 3;
-  }
-  
-  hr {
-    border: 6px dotted grey;
-    border-bottom: none;
-    width: 4%;
-    margin: 80px auto;
-  }
-  
-  p {
-    color: #40514e;
-    line-height: 2;
+
+  .skill-row p{
+    font-size: 1.2rem;
   }
   
   .btn {
@@ -155,14 +174,16 @@ body {
     background-image: linear-gradient(to bottom, #30e3cb);
     text-decoration: none;
   }
+
+  /* Experience */
   
   .company-name {
     margin: 0;
   }
   
   .contact-message {
-    width: 30%;
-    margin: 40px auto 60px;
+    width: 60%;
+    margin: 0 auto 30px;
   }
   
   .experience {
@@ -183,7 +204,7 @@ body {
   
   .fuso {
     float: left;
-    height: 17.5rem;
+    height: 21rem;
     margin: 5px 10px 0 0;
     padding: 15px 20px 0 0;
     width: 40%;
@@ -191,10 +212,14 @@ body {
   
   .nova {
     float: right;
-    height: 17.5rem;
+    height: 21rem;
     margin: 5px 0 0 10px;
     padding: 15px 0 0 20px;
     width: 40%;
+  }
+
+  .hr-middle {
+      margin-top: 10rem;
   }
   
   .my-tasks {
@@ -219,12 +244,14 @@ body {
   
   .location{
     display: inline-block;
+    font-size: 18px;
     font-weight: 700;
   }
   
   .year-join-end {
     display: inline-block;
     margin: 0 5%;
+    font-size: 18px;
     font-weight: 700;
   }
   
@@ -242,6 +269,7 @@ body {
   
   .remove-deco {
     padding-left: 0;
+    font-size: 20px;
   }
   
   .top-container {
@@ -251,19 +279,23 @@ body {
   }
   
   .middle-container {
-    margin: 100px 0;
+    margin: 100px 0 0;
   }
   
+  /* Bottom Container */
+
   .bottom-container {
-    background-color: #66bfbf;
-    padding: 50px 0 20px;
+    /* background-color: #66bfbf; */
+    padding: 20px 0 20px;
+    display: flex;
+    justify-content: center;
   }
   
-  a {
+    a {
     color: #11999E;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    margin: 10px 20px;
+    margin: 10px 50px;
     text-decoration: none;
   }
   
@@ -271,8 +303,17 @@ body {
     color: #eaf6f6;
     border-bottom: 1px solid;
   }
+
+  .icon {
+      font-size: 100px
+  }
   
   @media (max-width:1100px) {
+    /* Footer */
+    footer {
+         
+    }
+
     /* Navigation Bar */
     .center-nav {
         justify-content: center;
@@ -321,33 +362,73 @@ body {
         width: 50%;
     }
 
-     .contact-me h3 {
-       display: inline-block;
-       width: 12.5rem;
-     }
+    /* Skills */
+    .skill-row {
+        text-align: center;
+        width: 70%;
+    }
+
+    .skills-pic {
+        float: none;
+        margin: 0;
+        width: 80%;
+    }
+
+    .skills-japan {
+        float: none;
+        margin: 0;
+        width: 80%;
+    }
      
-     /* About Me */
+     /* Experience */
      .experience {
-       margin: 100px 30%;
+       margin: 100px auto;
        text-align: center;
+       width: 70%;
      }
   
      .experience-two {
-       margin: 100px 30%;
+       margin: 100px auto;
        text-align: center;
      }
   
      .fuso {
        float: none;
-       width: 50%;
-       height: 150px;
+       width: 75%;
        padding: 0;
      }
   
      .nova {
        float: none;
-       width: 50%;
-       height: 150px;
+       width: 100%;
        padding: 0;
      }
+
+     .remove-deco {
+         font-size: 1.2rem;
+         text-align: left;
+     }
+
+     /* Contact Me */
+
+    .contact-me h2 {
+        margin-bottom:  0.5rem;
+    }
+
+     .contact-me h3 {
+       display: inline-block;
+       line-height: 2;
+       width: 17rem;
+     }
+
+     /* Bottom Container */
+     .bottom-container {
+         flex-direction: column;
+         padding-top: 2.5rem;
+     }
+
+     .icon {
+        font-size: 3rem;
+        padding-bottom: 1rem;
+    }
    }
