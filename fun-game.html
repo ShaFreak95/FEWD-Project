@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Game</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+    <!-- Google Font -->
+    <!-- Lobster Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <!--Urbanist Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Urbanist&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section>
+        <nav class="mobile-menu-container">
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="contact.html">Contact</a>
+            <a href="fun-game.html">Fun Game</a>
+          </nav>
+    </section>
+    <header class="nav-header flex">
+        <div class="center-nav flex center-nav-mobile">
+            <a href="index.html">Shafiq</a>
+        </div>
+        <div class="right-nav flex right-nav-mobile">
+            <nav class="right-nav-list">
+                <a href="resume.html">Resume</a>
+                <a href="contact.html">Contact</a>
+                <a href="fun-game.html">Fun Game</a>
+            </nav>
+        </div>
+        <div class="mobile-bar">
+            <button id="mobile-bar-cta">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    <main>
+        <div class="game-header">
+            <h1>Let's Play A Game!!</h1>
+            <p>The rule is simple. Guess the right sequence of number. That's all!</p>
+        </div>
+        <div class="flex game-section-container">
+            <div class="game-menu">
+                <button id="start_btn">Start</button>
+            </div>
+            <div class="game-container">
+                <h1>Level <span class="level"></span></h1>
+                <input id="generated_number" /><br />
+                <div class="answer">
+                    <input id="user_input" type="number" placeholder="Guess here..."><br />
+                    <button id="submit_btn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>©2021 by Shafiq Akiya</p>
+    </footer>
+<script src="js/main.js"></script>
+</body>
+</html>

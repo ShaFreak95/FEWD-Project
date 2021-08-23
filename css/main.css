@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: "Urbanist", sans-serif;;
+    font-family: "Urbanist", sans-serif;
 }
 
 footer {
@@ -39,11 +39,18 @@ footer p{
 }
 
 .center-nav a:hover {
-    color: #0af392;
+    color: #44f8ff;
 }
 
 .mobile-bar {
     display: none;
+}
+
+.mobile-menu {
+    display: none;
+    background-color: white;
+    width: 100%;
+    height: 100%;
 }
 
 .right-nav {
@@ -59,7 +66,7 @@ footer p{
 }
 
 .right-nav a:hover {
-    color: #0af392;
+    color: #44f8ff;
     text-decoration: underline;
 }
 
@@ -123,13 +130,92 @@ footer p{
 }
 
 .about-me-box .icon:hover {
-    color: violet;
+    color: #44f8ff;
 }
+
+/* ****************************Fun Game Page**************************** */
+.game-header {
+    text-align: center;
+}
+
+.game-section-container {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+}
+
+.game-container {
+    display: none;
+    text-align: center;
+}
+
+.game-menu {
+    text-align: center;
+}
+
+.start-game {
+    display: block;
+}
+
+#generated_number {
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+}
+
+#start_btn {
+    border-radius: 15px;
+    font-size: 40px;
+    height: 100px;
+    width: 200px;
+}
+
+#submit_btn {
+    margin-top: 25px;
+    border-radius: 15px;
+    font-size: 28px;
+    height: 60px;
+    width: 120px;
+}
+
+#user_input {
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+}
+
 
 /* **************************Responsice Website************************** */
 /* Mobile */
 
 @media (min-width: 300px) and (max-width: 650px) {
+    /* Menu Responsive */
+    .mobile-menu-container {
+        background-color: white;;
+        display: none;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .mobile-menu-container .mobile-menu {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 3;
+    }
+
+    .mobile-menu-container .mobile-menu a{
+        color: black;
+        text-decoration: none;
+    }
+
     .center-nav {
         justify-content: center;
         width: 100%;
@@ -193,18 +279,41 @@ footer p{
     }
 
     .about-me-box .icon:hover {
-        color: violet;
+        color: #44f8ff;
     }
 
     .middle-section {
         margin-bottom: 2rem;
+    }
+
+    /* *********************Fun Game Page****************************** */
+    .game-section-container {
+        height: 15rem;
     }
 }
 
 /* Tablet */
 
 @media (max-width: 1024px) {
-    
+    .mobile-menu-container {
+        background-color: white;
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .mobile-menu-container .mobile-menu {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 3;
+    }
 
     .center-nav {
         justify-content: center;
