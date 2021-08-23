@@ -1,0 +1,353 @@
+body {
+    color: #40514e;
+    margin: 0;
+    text-align: center;
+    font-family: 'Merriweather', serif;
+  }
+
+  footer {
+    background-color: black;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ======================================Styling================================================ */
+
+.flex {
+    display: flex;
+}
+
+/* ======================================Nav Header================================================ */
+
+.center-nav {
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.center-nav a {  
+    color: black;
+    font-family: "Lobster", cursive;
+    font-size: 60px;
+    text-decoration: none;
+}
+
+.center-nav a:hover {
+    color: #0af392;
+}
+
+.mobile-bar {
+    display: none;
+}
+
+.right-nav {
+    align-items: center;
+    justify-content: flex-end;
+    width: 80%;
+}
+
+.right-nav a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.right-nav a:hover {
+    color: #0af392;
+    text-decoration: underline;
+}
+
+.right-nav-list {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+/* Header IMG */
+  
+  .top-cloud {
+    position: absolute;
+    right: 300px;
+    top: 50px;
+  }
+  
+  .bottom-cloud {
+    position: absolute;
+    left: 300px;
+    bottom: 300px;
+  }
+  
+  .profile-description {
+    display: inline-block;
+    width: 30%;
+  }
+  
+  .profile-pic {
+    border-radius: 100%;
+    height: 200px;
+    width: 200px;
+  }
+  
+  .skill-row {
+    margin: 100px auto 100px auto;
+    width: 50%;
+    text-align: left;
+  }
+  
+  h1 {
+    color: #66BFBF;
+    font-family: 'Sacramento', cursive;
+    font-size: 5.625rem; /* 100% means the default size is 16px / as for 'em', means M therefore the size of 1em is 16px*/
+    margin: 50px auto 0 auto;
+  }
+  
+  h2 {
+    color: #66BFBF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-bottom: 10px;
+  }
+  
+  h3 {
+    color: #11999E;
+    font-family: helvetica, sans-serif;
+    line-height: 3;
+  }
+  
+  hr {
+    border: 6px dotted grey;
+    border-bottom: none;
+    width: 4%;
+    margin: 80px auto;
+  }
+  
+  p {
+    color: #40514e;
+    line-height: 2;
+  }
+  
+  .btn {
+    background: #11cdd4;
+    background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+    background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn:hover {
+    background: #30e3cb;
+    background-image: -webkit-linear-gradient(top, #30e3cb);
+    background-image: -moz-linear-gradient(top, #30e3cb);
+    background-image: -ms-linear-gradient(top, #30e3cb);
+    background-image: -o-linear-gradient(top, #30e3cb);
+    background-image: linear-gradient(to bottom, #30e3cb);
+    text-decoration: none;
+  }
+  
+  .company-name {
+    margin: 0;
+  }
+  
+  .contact-message {
+    width: 30%;
+    margin: 40px auto 60px;
+  }
+  
+  .experience {
+    margin: 100px 20%;
+    text-align: left;
+  }
+  
+  .experience-two {
+    margin: 100px 20%;
+    text-align: left;
+  }
+  
+  .experience-two .year-join-end {
+    display: inline-block;
+    margin: 0 0 0 5%;
+    font-weight: 700;
+  }
+  
+  .fuso {
+    float: left;
+    height: 17.5rem;
+    margin: 5px 10px 0 0;
+    padding: 15px 20px 0 0;
+    width: 40%;
+  }
+  
+  .nova {
+    float: right;
+    height: 17.5rem;
+    margin: 5px 0 0 10px;
+    padding: 15px 0 0 20px;
+    width: 40%;
+  }
+  
+  .my-tasks {
+    line-height: 1.5;
+    margin: 0.5rem auto;
+  }
+  
+  .skills-pic {
+    border-radius: 30%;
+    float: left;
+    margin-right: 30px;
+    margin-top: 15px;
+    width: 25%;
+  }
+  
+  .skills-japan {
+    float: right;
+    margin-top: 10px;
+    margin-left: 25px;
+    width: 25%;
+  }
+  
+  .location{
+    display: inline-block;
+    font-weight: 700;
+  }
+  
+  .year-join-end {
+    display: inline-block;
+    margin: 0 5%;
+    font-weight: 700;
+  }
+  
+  .pro {
+    text-decoration: underline;
+  }
+  
+  .profile h2 {
+    font-weight: 700;
+  }
+  
+  /* .experience-container {
+    padding:0;
+  } */
+  
+  .remove-deco {
+    padding-left: 0;
+  }
+  
+  .top-container {
+    background-color: #eaf6f6;
+    position: relative;
+    padding-top: 100px;
+  }
+  
+  .middle-container {
+    margin: 100px 0;
+  }
+  
+  .bottom-container {
+    background-color: #66bfbf;
+    padding: 50px 0 20px;
+  }
+  
+  a {
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin: 10px 20px;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #eaf6f6;
+    border-bottom: 1px solid;
+  }
+  
+  @media (max-width:1100px) {
+    /* Navigation Bar */
+    .center-nav {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .mobile-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 0.5rem;
+    }
+
+    #mobile-bar-cta {
+        font-size: 1.5rem;
+    }
+
+    .right-nav {
+        display: none;
+    }
+    
+    .right-nav a {
+        color: black;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .right-nav-list {
+        display: flex;
+        justify-content: space-evenly;
+        width: 80%;
+    }
+
+    /* Header IMG */
+    .top-container {
+        padding-top: 1rem;
+    }
+
+    .bottom-cloud {
+        width: 20%;
+        left: 70%;
+        bottom: 20%;
+    }
+
+    .mountain {
+        width: 50%;
+    }
+
+     .contact-me h3 {
+       display: inline-block;
+       width: 12.5rem;
+     }
+     
+     /* About Me */
+     .experience {
+       margin: 100px 30%;
+       text-align: center;
+     }
+  
+     .experience-two {
+       margin: 100px 30%;
+       text-align: center;
+     }
+  
+     .fuso {
+       float: none;
+       width: 50%;
+       height: 150px;
+       padding: 0;
+     }
+  
+     .nova {
+       float: none;
+       width: 50%;
+       height: 150px;
+       padding: 0;
+     }
+   }
