@@ -91,6 +91,10 @@ font-family: "Urbanist", sans-serif;
 display: none;
 }
 
+.mobile-menu-button {
+  display: none;
+}
+
 .right-nav {
   align-items: center;
   justify-content: flex-end;
@@ -329,10 +333,11 @@ display: none;
 }
 
 .mobile-menu-container {
-  background-color: white;;
+  background-color: white;
+  height: 210px;
   display: none;
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 9%;
   bottom: 0;
   left: 0;
   right: 0;
@@ -369,6 +374,51 @@ display: none;
 
   #mobile-bar-cta {
       font-size: 1.5rem;
+  }
+
+  .mobile-menu-button {
+    border: 2px solid black;
+    transition: all .5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 40px;
+    width: 50px;
+}
+
+header .mobile-menu-button .menu-button-burger {
+    background-color: rgb(0, 0, 0);
+    border-radius: 5px;
+    position: absolute;
+    transition: all .5s ease-in-out;
+    height: 6px;
+    width: 30px;
+}
+
+.mobile-menu-button .burger-1{
+    transform: translateY(-10px);
+}
+
+.mobile-menu-button .burger-3 {
+    transform: translateY(10px);
+}
+
+.mobile-menu-button.open .burger-2 {
+    background: transparent;
+    transform: translateX(-10px);
+}
+
+.mobile-menu-button.open .burger-1 {
+    transform: rotate(45deg);
+}
+
+.mobile-menu-button.open .burger-3 {
+    transform: rotate(-45deg);
+}
+
+  .nav-header {
+    align-items: center;
   }
 
   .right-nav {
