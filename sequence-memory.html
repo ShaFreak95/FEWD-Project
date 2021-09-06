@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequence Memory Game</title>
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Animate -->
+    <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+    <!-- Google Font -->
+    <!-- Lobster Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <!-- Bebas Nue Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!--Urbanist Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Urbanist&display=swap" rel="stylesheet">
+    <!--Montserrat Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital@1&family=Montserrat:wght@100&family=Sacramento&display=swap" rel="stylesheet">
+    <!-- Press Start 2P Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="wrong-answer">
+        <div class="modal-box">
+            <div class="flex center">
+                <div class="flex center">
+                    <a class="restart-btn" href="#">Restart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="sequence-memory-container">
+        <section class="mobile-menu-container">
+            <nav class="mobile-menu show-menu hide-menu">
+              <a href="index.html">Home</a>
+              <a href="resume.html">Resume</a>
+              <a href="contact.html">Contact</a>
+              <a href="fun-game.html">Number Memory</a>
+              <a href="sequence-memory.html">Sequence Memory</a>
+            </nav>
+        </section>
+        <header class="nav-header flex">
+            <div class="center-nav flex center-nav-mobile">
+                <a href="index.html">Shafiq</a>
+            </div>
+            <div class="right-nav flex right-nav-mobile">
+                <nav class="right-nav-list">
+                    <a href="resume.html">Resume</a>
+                    <a href="contact.html">Contact</a>
+                    <div class="dropdown">
+                        <a href="#">Fun Game</a>
+                        <div class="dropdown-content">
+                            <a href="fun-game.html"> Number Memory</a>
+                            <a href="sequence-memory.html"> Sequence Memory</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="mobile-menu-button">
+                <div class="menu-button-burger burger-1"></div>
+                <div class="menu-button-burger burger-2"></div>
+                <div class="menu-button-burger burger-3"></div>
+            </div>
+        </header>
+        <section class="sequence-memory-game">
+            <h1>Level <span></span></h1>
+            <div class="game-menu">
+                <button id="start_btn">Start</button>
+            </div>
+            <div class="box-rows grid-box">
+                <div class="boxes b1"></div>
+                <div class="boxes b2"></div>
+                <div class="boxes b3"></div>
+                <div class="boxes b4 "></div>
+                <div class="boxes b5"></div>
+                <div class="boxes b6"></div>
+                <div class="boxes b7"></div>
+                <div class="boxes b8"></div>
+                <div class="boxes b9"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>©2021 by Shafiq Akiya</p>
+    </footer>
+<script src="js/sm.js"></script>
+</body>
+</html>

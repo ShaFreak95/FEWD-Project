@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun Game</title>
+    <title>Number Memory</title>
     <link rel="stylesheet" href="css/main.css">
     <!-- Animate -->
     <link rel="stylesheet"
@@ -25,58 +25,67 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Urbanist&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="mobile-menu-container">
-        <nav class="mobile-menu show-menu hide-menu">
-            <a href="index.html">Home</a>
-            <a href="resume.html">Resume</a>
-            <a href="contact.html">Contact</a>
-            <a href="fun-game.html">Fun Game</a>
-          </nav>
-    </section>
-    <header class="nav-header flex">
-        <div class="center-nav flex center-nav-mobile">
-            <a href="index.html">Shafiq</a>
-        </div>
-        <div class="right-nav flex right-nav-mobile">
-            <nav class="right-nav-list">
+    <main class="number-memory">
+        <section class="mobile-menu-container">
+            <nav class="mobile-menu show-menu hide-menu">
+                <a href="index.html">Home</a>
                 <a href="resume.html">Resume</a>
                 <a href="contact.html">Contact</a>
-                <a href="fun-game.html">Fun Game</a>
-            </nav>
-        </div>
-        <div class="mobile-menu-button">
-            <div class="menu-button-burger burger-1"></div>
-            <div class="menu-button-burger burger-2"></div>
-            <div class="menu-button-burger burger-3"></div>
-        </div>
-        <!-- <div class="mobile-bar">
-            <button id="mobile-bar-cta">
-                <i class="fa fa-bars"></i>
-            </button>
-        </div> -->
-    </header>
-    <main>
-        <div class="game-header">
-            <h1>Let's Play A Game!!</h1>
-            <p>The rule is simple. Guess the right sequence of number. That's all!</p>
-        </div>
-        <div class="flex game-section-container">
-            <div class="game-menu">
-                <button id="start_btn">Start</button>
+                <a href="fun-game.html">Number Memory</a>
+                <a href="sequence-memory.html">Sequence Memory</a>
+              </nav>
+        </section>
+        <header class="nav-header flex">
+            <div class="center-nav flex center-nav-mobile">
+                <a href="index.html">Shafiq</a>
             </div>
-            <div class="game-container">
-                <h1>Level <span class="level"></span></h1>
-                <input id="generated_number" /><br />
-                <div class="answer">
-                    <input id="user_input" type="number" placeholder="Guess here..."><br />
-                    <button id="submit_btn">Submit</button>
+            <div class="right-nav flex right-nav-mobile">
+                <nav class="right-nav-list">
+                    <a href="resume.html">Resume</a>
+                    <a href="contact.html">Contact</a>
+                    <div class="dropdown">
+                        <a href="#">Fun Game</a>
+                        <div class="dropdown-content">
+                            <a href="fun-game.html"> Number Memory</a>
+                            <a href="sequence-memory.html"> Sequence Memory</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="mobile-menu-button">
+                <div class="menu-button-burger burger-1"></div>
+                <div class="menu-button-burger burger-2"></div>
+                <div class="menu-button-burger burger-3"></div>
+            </div>
+            <!-- <div class="mobile-bar">
+                <button id="mobile-bar-cta">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div> -->
+        </header>
+        <main>
+            <div class="game-header">
+                <h1>Let's Play A Game!!</h1>
+                <p>The rule is simple. Guess the right sequence of number. That's all!</p>
+            </div>
+            <div class="flex game-section-container">
+                <div class="game-menu">
+                    <button id="start_btn">Start</button>
+                </div>
+                <div class="game-container">
+                    <h1>Level <span class="level"></span></h1>
+                    <input id="generated_number" /><br />
+                    <div class="answer">
+                        <input id="user_input" type="number" placeholder="Guess here..."><br />
+                        <button id="submit_btn">Submit</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </main>
+        <footer>
+            <p>©2021 by Shafiq Akiya</p>
+        </footer>
     </main>
-    <footer>
-        <p>©2021 by Shafiq Akiya</p>
-    </footer>
 <script src="js/main.js"></script>
 </body>
 </html>

@@ -24,6 +24,11 @@ footer p{
     display: flex;
 }
 
+.sequence-memory-container,
+.number-memory{
+    background-color: lightblue;
+}
+
 /* ======================================Nav Header================================================ */
 
 .center-nav {
@@ -40,6 +45,19 @@ footer p{
 
 .center-nav a:hover {
     color: #44f8ff;
+}
+
+.nav-header .right-nav .right-nav-list .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+}
+
+.nav-header .right-nav .right-nav-list .dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .mobile-bar {
@@ -151,7 +169,11 @@ footer p{
     width: 90%;
 }
 
-/* ****************************Fun Game Page**************************** */
+/* ****************************Number Memory Game Page**************************** */
+.number-memory {
+    height: 100vh;
+}
+
 .game-header {
     text-align: center;
 }
@@ -203,12 +225,103 @@ footer p{
     font-size: 20px;
 }
 
+/* ****************************Sequence Memory Game Page**************************** */
+
+.sequence-memory-container {
+    height: 100vh;
+}
+
+.sequence-memory-game .game-menu{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sequence-memory-game h1 {
+    display: none;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 60px;
+    padding-top: 100px;
+    text-align: center;
+  }
+
+.center {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.grid-box {
+  display: none;
+  grid-template-rows: 160px 160px 160px;
+  grid-template-columns: repeat(3, 160px);
+}
+
+/* Wrong asnwer modal box */
+.wrong-answer {
+  background-color: rgb(0,0,0,0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+}
+
+.wrong-answer .modal-box {
+  /* background-color: white; */
+  height: 300px;
+  width: 300px;
+}
+
+.align-btn-centre {
+  align-items: center;
+  justify-content: center;
+}
+
+.wrong-answer .modal-box .flex div {
+  background-color: lightblue;
+  border-radius: 1rem;
+  height: 80px;
+  width: 150px;
+}
+
+.wrong-answer .modal-box .flex div:hover {
+background-color: #12b4e8;
+color: #fefefe;
+}
+
+.wrong-answer .modal-box .flex div > .restart-btn {
+  color: black;
+  font-size: 32px;
+  text-decoration: none;
+}
+/* Boxes section */
+
+.box-rows {
+    margin-top: 10px;
+    height: 65vh;
+    align-content: flex-start;
+    justify-content: center;
+}
+
+.boxes {
+  background-color: white;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 10px;
+}
 
 /* **************************Responsice Website************************** */
 /* Mobile */
 
 @media (min-width: 300px) and (max-width: 650px) {
     /* Menu Responsive */
+    .dropdown-content {
+        display: none;
+    }
+
     .show-menu {
         animation: showMenu 1s ease-out;
     }
@@ -362,10 +475,36 @@ footer p{
         margin-bottom: 2rem;
     }
 
-    /* *********************Fun Game Page****************************** */
+    /* *********************Number Memory Game Page****************************** */
     .game-section-container {
         height: 15rem;
     }
+
+    /* *********************Sequence Memory Game Page****************************** */
+    .sequence-memory-game h1 {
+        font-size: 2.2rem;
+      }
+
+    /* Boxes Section */
+    .sequence-memory-game {
+        display: flex;
+        flex-direction: column;
+      }
+  
+      .box-rows {
+        width: 100vw;
+    }
+  
+      .boxes {
+        background-color: white;
+        height: 7rem;
+        width: 7rem;
+      }
+  
+      .grid-box {
+        grid-template-rows: repeat(3, 8rem);
+        grid-template-columns: repeat(3, 8rem);
+      }
 }
 
 /* Tablet */

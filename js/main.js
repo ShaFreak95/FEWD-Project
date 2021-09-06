@@ -16,10 +16,6 @@ document.querySelector(".mobile-menu-button").addEventListener("click", function
         document.querySelector(".mobile-menu").classList.toggle("hide-menu", true);
         document.querySelector(".mobile-menu-container").style.display = "none";
     }
-        // setTimeout(function() {
-        //     document.querySelector(".mobile-menu").classList.toggle("animate__backInRight", true);
-        //     document.querySelector(".mobile-menu").classList.toggle("animate__backOutRight", false);
-        // }, 1000);
 })
     
 
@@ -68,7 +64,7 @@ document.querySelector("#submit_btn").addEventListener("click", function() {
 
 function startGame() {
     //not displaying the asnwer input box until atfer 5 seconds
-    document.querySelector(".game-menu").style.display = "none"
+    document.querySelector(".game-menu").style.display = "none";
     document.querySelector(".game-container").classList.add("start-game");
     document.querySelector(".answer").style.display = "none";
 
