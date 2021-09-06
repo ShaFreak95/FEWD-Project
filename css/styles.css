@@ -410,6 +410,7 @@ display: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 0.3rem;
     position: relative;
     height: 40px;
     width: 50px;
