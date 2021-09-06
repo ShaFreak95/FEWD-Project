@@ -31,6 +31,10 @@ footer p{
 
 /* ======================================Nav Header================================================ */
 
+#dropdown {
+    transform: rotate(-90deg);
+}
+
 .center-nav {
     justify-content: flex-end;
     width: 100%;
@@ -48,16 +52,22 @@ footer p{
 }
 
 .nav-header .right-nav .right-nav-list .dropdown .dropdown-content {
-    display: none;
-    position: absolute;
     background-color: #f1f1f1;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    display: none;
+    position: absolute;
     text-align: center;
+    width: 130px;
+    z-index: 1;
 }
 
 .nav-header .right-nav .right-nav-list .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.nav-header .right-nav .right-nav-list .dropdown:hover #dropdown {
+    animation: dropdownNormal .5s ease-out;
+    animation-fill-mode: forwards; /* Img will remain at the last keyframe positions */
 }
 
 .mobile-bar {
@@ -586,5 +596,14 @@ color: #fefefe;
 
     100% {
         opacity: 0%;
+    }
+}
+
+@keyframes dropdownNormal {
+    0% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(0deg);
     }
 }
