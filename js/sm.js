@@ -29,7 +29,7 @@ let boxClick = document.querySelectorAll("section .box-rows .boxes")
 document.querySelector("#start_btn").addEventListener("click", function() {
     document.querySelector(".game-menu").style.display = "none";
     startGame();
-    document.querySelector(".sequence-memory-game h1").style.display = "block";
+    document.querySelector(".sequence-memory-game .level").style.display = "block";
     document.querySelector(".sequence-memory-container .sequence-memory-game .grid-box").style.display = "grid";
 })
 

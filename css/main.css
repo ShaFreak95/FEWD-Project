@@ -201,7 +201,6 @@ footer p{
 }
 
 .game-menu {
-    background-color: #fefefe;
     text-align: center;
 }
 
@@ -216,6 +215,7 @@ footer p{
 }
 
 #start_btn {
+    background-color: #fefefe;
     border-radius: 15px;
     font-size: 40px;
     height: 100px;
@@ -243,18 +243,16 @@ footer p{
 }
 
 .sequence-memory-game .game-menu{
-    background-color: #fefefe;
-    height: 80vh;
+    height: 60vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.sequence-memory-game h1 {
+.sequence-memory-game .level {
     display: none;
     font-family: 'Press Start 2P', cursive;
     font-size: 60px;
-    padding-top: 100px;
     text-align: center;
   }
 
@@ -374,6 +372,7 @@ color: #fefefe;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-right: 0.3rem;
         position: relative;
         height: 40px;
         width: 50px;

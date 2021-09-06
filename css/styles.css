@@ -159,7 +159,7 @@ display: none;
 .profile-description {
   display: inline-block;
   font-size: 1.5rem;
-  width: 50%;
+  width: 90%;
 }
 
 .profile-pic {
@@ -236,6 +236,7 @@ display: none;
 }
 
 .fuso {
+  border-radius: 15%;
   float: left;
   height: 21rem;
   margin: 5px 10px 0 0;
@@ -244,6 +245,7 @@ display: none;
 }
 
 .nova {
+  border-radius: 15%;
   float: right;
   height: 21rem;
   margin: 5px 0 0 10px;
@@ -509,14 +511,20 @@ header .mobile-menu-button .menu-button-burger {
    }
 
    .fuso {
+     border-radius: 1rem;
      float: none;
-     width: 75%;
+     height: 12rem;
+     width: 15rem;
+     margin: 0;;
      padding: 0;
    }
 
    .nova {
+     border-radius: 1rem;
      float: none;
-     width: 100%;
+     height: 12rem;
+     width: 15rem;
+     margin: 0;;
      padding: 0;
    }
 
