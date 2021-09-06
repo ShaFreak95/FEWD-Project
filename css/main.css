@@ -201,6 +201,7 @@ footer p{
 }
 
 .game-menu {
+    background-color: #fefefe;
     text-align: center;
 }
 
@@ -242,6 +243,7 @@ footer p{
 }
 
 .sequence-memory-game .game-menu{
+    background-color: #fefefe;
     height: 80vh;
     display: flex;
     justify-content: center;
