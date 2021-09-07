@@ -238,6 +238,22 @@ footer p{
 
 /* ****************************Sequence Memory Game Page**************************** */
 
+/* Modal Box */
+.center > h1 {
+    color: lightblue;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 5rem;
+}
+
+.center {
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+/* Game Container */
+
 .sequence-memory-container {
     height: 100vh;
 }
@@ -255,12 +271,6 @@ footer p{
     font-size: 60px;
     text-align: center;
   }
-
-.center {
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
 
 .grid-box {
   display: none;
@@ -282,7 +292,7 @@ footer p{
 .wrong-answer .modal-box {
   /* background-color: white; */
   height: 300px;
-  width: 300px;
+  width: 50rem;
 }
 
 .align-btn-centre {
@@ -491,7 +501,28 @@ color: #fefefe;
         height: 15rem;
     }
 
+    .game-header {
+        text-align: center;
+        margin-left: 0.7rem;
+        width: 22rem;
+    }
+
     /* *********************Sequence Memory Game Page****************************** */
+    .center {
+        justify-content: center;
+    }
+
+    .center > h1 {
+        color: lightblue;
+        font-family: 'Press Start 2P', cursive;
+        font-size: 2rem;
+    }
+    
+    .wrong-answer .modal-box {
+        height: 25rem;
+        width: 20rem;
+    }
+
     .sequence-memory-game h1 {
         font-size: 2.2rem;
       }
@@ -500,6 +531,16 @@ color: #fefefe;
     .sequence-memory-game {
         display: flex;
         flex-direction: column;
+    }
+
+    .sequence-memory-game .game-menu{
+        height: 50vh;
+    }
+    
+
+    .sequence-memory-game .level {
+        font-size: 2rem;
+        margin: 1.5rem 0;
       }
   
       .box-rows {

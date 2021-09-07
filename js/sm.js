@@ -36,39 +36,41 @@ document.querySelector("#start_btn").addEventListener("click", function() {
 for (let x = 0; x < 9 ; x++) {
     boxClick[x].addEventListener("click", function(e) {
         let theBoxNumber = x + 1;
-
-        userSequence.push(theBoxNumber);
-
-
-
-        console.log("The list of array after user clicked the box:" + userSequence);
-
-        //get the class name for the clicked box
         let test = e.target;
 
-        test.style.backgroundColor = "#c79a9a";
-        setTimeout ( function() {
-            test.style.backgroundColor = "white";
-        }, 300)
+        //push the value into the empty array
+        userSequence.push(theBoxNumber);
 
-        // console.log(test);
-        if (userSequence.length != sequence.length || userSequence[0] != sequence[0]) {
-            for (let i = 0; i < userSequence.length; i++) {
-                if (userSequence[i] != sequence[i]) {
-                    document.querySelector(".wrong-answer").style.display = "flex";
-                    alert("Wrong sequence");
-                }
-            }
-        }
-        else {
-            startGame();
-        }
+        //animation will be triggered to the box that been clicked
+        pressAnimation(test);
+
+        //comparing each array value position
+        compareAnswer(userSequence.length - 1)
     })
 }
 
 document.querySelector(".wrong-answer .modal-box .flex div > .restart-btn").addEventListener("click", function() {
     location.reload();
 })
+
+function compareAnswer(arr) {
+    if (userSequence[arr] === sequence[arr]) {
+        //Ensure the array list to have the same length as the sequence's array
+        if (userSequence.length === sequence.length ) {
+            startGame();
+        }
+    }
+    else {
+        document.querySelector(".wrong-answer").style.display = "flex";
+    }
+}
+
+function pressAnimation(pressedBox) {
+    pressedBox.style.backgroundColor = "#c79a9a";
+    setTimeout ( function() {
+        pressedBox.style.backgroundColor = "white";
+    }, 300)
+}
 
 function startGame() {
     userSequence = [];
@@ -98,8 +100,8 @@ function startGame() {
             box.style.backgroundColor = "white";
         }, 1000)
 
-    }
-    else {
+      }
+      else {
 
         //targeting the element for the clicked box
         let box = document.querySelector("section .box-rows .b" + randNumber)
@@ -116,5 +118,5 @@ function startGame() {
         setTimeout( function() {
             box.style.backgroundColor = "white";
         }, 1000)
-    }
+      }
 }
