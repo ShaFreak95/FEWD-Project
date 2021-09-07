@@ -338,16 +338,20 @@ color: #fefefe;
 
 @media (max-width: 325px) {
     .sequence-memory-container {
-        height: 105vh;
+        height: 135vh;
         width: 115%;
     }
 
     .game-header {
         width: 90%;
     }
+
+    .wrong-answer {
+        height: 105vh;
+    }
 }
 
-@media (min-width: 300px) and (max-width: 650px) {
+@media (min-width: 300px) and (max-width: 770px) {
     /* Menu Responsive */
     .dropdown-content {
         display: none;
@@ -526,12 +530,16 @@ color: #fefefe;
     .center > h1 {
         color: lightblue;
         font-family: 'Press Start 2P', cursive;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     
     .wrong-answer .modal-box {
         height: 25rem;
         width: 20rem;
+    }
+
+    .sequence-memory-container {
+        height: 105vh;
     }
 
     .sequence-memory-game h1 {
