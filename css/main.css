@@ -336,6 +336,17 @@ color: #fefefe;
 /* **************************Responsice Website************************** */
 /* Mobile */
 
+@media (max-width: 325px) {
+    .sequence-memory-container {
+        height: 105vh;
+        width: 115%;
+    }
+
+    .game-header {
+        width: 90%;
+    }
+}
+
 @media (min-width: 300px) and (max-width: 650px) {
     /* Menu Responsive */
     .dropdown-content {
@@ -503,8 +514,8 @@ color: #fefefe;
 
     .game-header {
         text-align: center;
-        margin-left: 0.7rem;
-        width: 22rem;
+        margin-left: 1rem;
+        width: 93%;
     }
 
     /* *********************Sequence Memory Game Page****************************** */
