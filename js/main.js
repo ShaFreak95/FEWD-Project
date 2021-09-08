@@ -1,6 +1,22 @@
-let menuOpen = false
+//-----------------------------------Preloader-----------------------------------P
+let loader = document.querySelector(".reveal-animation-container")
+
+loader.classList.toggle("fade-out", false)
+
+function fadeOut() {
+    setTimeout(function() {
+        loader.classList.toggle("fade-out", true)
+    }, 7500);
+    setTimeout(function() {
+        loader.style.display = "none"
+    }, 8000);
+}
+
+fadeOut();
 
 //Menu Bar
+let menuOpen = false
+
 document.querySelector(".mobile-menu-button").addEventListener("click", function() {
     if (!menuOpen) {
         document.querySelector(".mobile-menu-button").classList.add("open");

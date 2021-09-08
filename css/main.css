@@ -18,6 +18,156 @@ footer p{
     color: white;
 }
 
+/* ======================================Preloader================================================ */
+
+.fade-out {
+    animation: fadeOut 1s ease forwards;
+  }
+  .reveal-animation-container {
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 999999;
+  }
+  .reveal-box {
+    animation: revealBoxMovesUpward 1s ease forwards;
+    animation-delay: 3s;
+    max-width: 700px;
+  }
+  .reveal-box h1 {
+    animation: textReveal .5s forwards ;
+    animation-delay: 1s;
+    color: transparent;
+    display: inline-block; /* remove the gap of h1 */
+    font-size: 4rem;
+    margin: 0;
+    position: relative; /* positioning for the overlay, this is the parent for absolute*/
+  }
+  .reveal-box h1:last-child {
+    animation: textRevealLightblue .5s forwards ;
+    animation-delay: 1s;
+  }
+  .reveal-box h1:nth-child(1) {
+    animation-delay: 1s;
+  }
+  .reveal-box h1:nth-child(2) {
+    animation-delay: 1.5s;
+  }
+  .reveal-box h1:nth-child(3) {
+    animation-delay: 2s;
+  }
+  .reveal-box span {
+    animation: boxReveal 1s ease forwards;
+    animation-delay: .5s;
+    background-color: lightblue;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .reveal-box h1:nth-child(1) span {
+    animation-delay: .5s;
+  }
+  .reveal-box h1:nth-child(2) span {
+    animation-delay: 1s;
+  }
+  .reveal-box h1:nth-child(3) span {
+    animation-delay: 1.5s;
+  }
+  .loading-container {
+    /* animation: loadingReveal .5s ease forwards;
+    animation-delay: 4s; */
+    max-width: 100%;
+  }
+  .loading-container .loading {
+    animation: loadingBoxReveal .5s ease forwards;
+    animation-delay: 4s;
+    background-color: transparent;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 0 10px;
+  }
+  .loading-container .loading h1 {
+    animation: loadingTextReveal .5s ease-in-out forwards;
+    animation-delay: 4.5s;
+    color: transparent;
+    font-size: 2.5rem;
+  }
+  .loading-container .loading .dotted {
+    color: transparent;
+  }
+  .loading-container .loading .dotted:nth-child(1) {
+    animation: dottedReveal .5s ease forwards;
+    animation-delay: 5.5s;
+  }
+  .loading-container .loading .dotted:nth-child(2) {
+    animation: dottedReveal .5s ease forwards;
+    animation-delay: 6s;
+  }
+  .loading-container .loading .dotted:nth-child(3) {
+    animation: dottedReveal .5s ease forwards;
+    animation-delay: 6.5s;
+  }
+  
+  @keyframes boxReveal {
+    50% {
+      left: 0;
+      width: 100%;    
+    }
+    100% {
+      left: 100%;
+      width: 0;    
+    }
+  }
+  @keyframes textReveal {
+    100% {
+      color: black;    
+    }
+  }
+  @keyframes textRevealLightblue {
+    100% {
+      color: lightblue;    
+    }
+  }
+  @keyframes revealBoxMovesUpward {
+    100% {
+      transform: translateY(-150px);
+    }
+  }
+  /* @keyframes loadingReveal {
+    100% {
+      background-color: lightblue;
+    }
+  } */
+  @keyframes fadeOut {
+    100% {
+      opacity: 0%;
+    }
+  }
+  @keyframes loadingBoxReveal {
+    100% {
+      background-color: lightblue;
+    }
+  }
+  @keyframes loadingTextReveal {
+    100% {
+      color: #fff;
+    }
+  }
+  @keyframes dottedReveal {
+    100% {
+      color: #ffff;
+    }
+  }
+
 /* ======================================Styling================================================ */
 
 .flex {
@@ -352,6 +502,14 @@ color: #fefefe;
 }
 
 @media (min-width: 300px) and (max-width: 770px) {
+    /* Preloader */
+    .reveal-box {
+        text-align: center;
+    }
+    .reveal-box h1 {
+        font-size: 1.8rem;
+    }
+
     /* Menu Responsive */
     .dropdown-content {
         display: none;
