@@ -1,5 +1,6 @@
 //-----------------------------------Preloader-----------------------------------P
-let loader = document.querySelector(".reveal-animation-container")
+let loader = document.querySelector(".reveal-animation-container");
+let session = sessionStorage.getItem("dontLoad");
 
 loader.classList.toggle("fade-out", false)
 
@@ -12,7 +13,16 @@ function fadeOut() {
     }, 8000);
 }
 
-fadeOut();
+//Only showing the splash screen once
+$(window).on("load", function() {
+    if (session == null) {
+        fadeOut();
+        sessionStorage.setItem('dontLoad', 'true');
+    }
+    else {
+        $(".reveal-animation-container").hide();
+    }
+})
 
 //Menu Bar
 let menuOpen = false
