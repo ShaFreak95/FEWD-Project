@@ -1,3 +1,23 @@
+//Menu Bar
+let menuOpen = false
+
+document.querySelector(".mobile-menu-button").addEventListener("click", function() {
+    if (!menuOpen) {
+        document.querySelector(".mobile-menu-button").classList.add("open");
+        menuOpen = true;
+        document.querySelector(".mobile-menu-container").style.display = "block";
+        document.querySelector(".mobile-menu").classList.toggle("show-menu", true);
+        document.querySelector(".mobile-menu").classList.toggle("hide-menu", false);
+    }
+    else {
+        document.querySelector(".mobile-menu-button").classList.remove("open");
+        menuOpen = false;
+        document.querySelector(".mobile-menu").classList.toggle("show-menu", false);
+        document.querySelector(".mobile-menu").classList.toggle("hide-menu", true);
+        document.querySelector(".mobile-menu-container").style.display = "none";
+    }
+})
+
 //-----------------------------------Preloader-----------------------------------P
 let loader = document.querySelector(".reveal-animation-container");
 let session = sessionStorage.getItem("dontLoad");
@@ -23,47 +43,6 @@ $(window).on("load", function() {
         $(".reveal-animation-container").hide();
     }
 })
-
-//Menu Bar
-let menuOpen = false
-
-document.querySelector(".mobile-menu-button").addEventListener("click", function() {
-    if (!menuOpen) {
-        document.querySelector(".mobile-menu-button").classList.add("open");
-        menuOpen = true;
-        document.querySelector(".mobile-menu-container").style.display = "block";
-        document.querySelector(".mobile-menu").classList.toggle("show-menu", true);
-        document.querySelector(".mobile-menu").classList.toggle("hide-menu", false);
-    }
-    else {
-        document.querySelector(".mobile-menu-button").classList.remove("open");
-        menuOpen = false;
-        document.querySelector(".mobile-menu").classList.toggle("show-menu", false);
-        document.querySelector(".mobile-menu").classList.toggle("hide-menu", true);
-        document.querySelector(".mobile-menu-container").style.display = "none";
-    }
-})
-    
-
-// document.querySelector("#mobile-bar-cta").addEventListener("click", function() {
-//     document.querySelector(".mobile-menu-container").style.display = "block";
-//     document.querySelector(".mobile-menu").classList.toggle("show-menu", true);
-//     document.querySelector(".mobile-menu").classList.toggle("hide-menu", false);
-//     // setTimeout(function() {
-//     //     document.querySelector(".mobile-menu").classList.toggle("animate__backInRight", true);
-//     //     document.querySelector(".mobile-menu").classList.toggle("animate__backOutRight", false);
-//     // }, 1000);
-// })
-
-// document.querySelector("#close_btn").addEventListener("click", function() {
-//     document.querySelector(".mobile-menu").classList.toggle("show-menu", true);
-//     document.querySelector(".mobile-menu").classList.toggle("hide-menu", false);
-//     document.querySelector(".mobile-menu-container").style.display = "none";
-//     // setTimeout(function() {
-//     //     document.querySelector(".mobile-menu").classList.toggle("show-menu", true);
-//     //     document.querySelector(".mobile-menu").classList.toggle("hide-menu", false);
-//     // }, 800);
-// })
 
 //Fun Game Logic
 let randomNumber = 0;

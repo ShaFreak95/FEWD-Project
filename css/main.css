@@ -319,15 +319,48 @@ footer p{
 }
 
 /* ****************************Contact Page**************************** */
-
 .form {
-    margin-left: 0.5rem;
+    background-color: lightblue;
+    height: 90vh;
+    text-align: center;
+    position: relative;
+    z-index: -2;
 }
-
+.form h1 {
+    margin: 0;
+}
+.bg-overlay {
+    background-image: url("https://static-cse.canva.com/_next/static/assets/wave.2881x801.e3004027281d91aea8440556fa84fbfd.png");
+    width: 100%;
+    height: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 0;
+}
+.form .bg-overlay h1 {
+    margin: 0;
+}
+.contact-form {
+    background-color: #fefefe;
+    box-shadow: 5px 5px 10px black;
+    display: inline-block;
+    width: 50%;
+}
+.contact-form .name {
+    width: 45%;
+}
+.contact-form .e-mail {
+    width: 90%;
+}
 #message {
     height: 9rem;
     width: 90%;
 }
+
+
 
 /* ****************************Number Memory Game Page**************************** */
 .number-memory {
@@ -409,7 +442,7 @@ footer p{
 }
 
 .sequence-memory-game .game-menu{
-    height: 60vh;
+    height: 55vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -501,7 +534,7 @@ color: #fefefe;
     }
 }
 
-@media (min-width: 300px) and (max-width: 770px) {
+@media (min-width: 300px) and (max-width: 1100px) {
     /* Preloader */
     .reveal-box {
         text-align: center;
@@ -524,11 +557,14 @@ color: #fefefe;
     }
 
     .mobile-menu-container {
+        animation: menubarSlideDown .5s ease;
+        transition: 0.5s;
         background-color: white;
         height: 210px;
         display: none;
+        padding-block: 1rem;
         position: absolute;
-        top: 10%;
+        top: 7.7%;
         bottom: 0;
         left: 0;
         right: 0;
@@ -536,19 +572,35 @@ color: #fefefe;
     }
 
     .mobile-menu-container .mobile-menu {
+        animation: showMenuContent .5s ease forwards;
+        animation-delay: .2s;
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         line-height: 3;
+        visibility: hidden;
     }
 
     .mobile-menu-container .mobile-menu a{
         color: black;
         text-decoration: none;
     }
-
+    @keyframes menubarSlideDown {
+        0% {
+            height: 0;
+        }
+        100% {
+            height: 201px;
+        }
+    }
+    @keyframes showMenuContent {
+        100% {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
     .mobile-menu-button {
         border: 2px solid black;
         transition: all .5s ease-in-out;
@@ -669,6 +721,11 @@ color: #fefefe;
         margin-bottom: 2rem;
     }
 
+    /* Contact */
+    /* #message {
+
+    } */
+
     /* *********************Number Memory Game Page****************************** */
     .game-section-container {
         height: 15rem;
@@ -738,19 +795,21 @@ color: #fefefe;
 
 /* Tablet */
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1100px) {
     .mobile-menu-container {
         background-color: white;
         display: none;
         height: 210px;
         position: absolute;
-        top: 10%;
+        top: 7.7%;
         bottom: 0;
         left: 0;
         right: 0;
         z-index: 1;
     }
-
+    .mobile-menu-button {
+        display: flex;
+    }
     .mobile-menu-container .mobile-menu {
         height: 100%;
         display: flex;
