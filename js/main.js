@@ -22,11 +22,14 @@ document.querySelector(".mobile-menu-button").addEventListener("click", function
 let loader = document.querySelector(".reveal-animation-container");
 let session = sessionStorage.getItem("dontLoad");
 
-loader.classList.toggle("fade-out", false)
+loader.classList.toggle("fade-out", false);
+//disable the Welcome text in index.html
+document.querySelector(".img-title-header > h1").classList.toggle("animate__swing", false);
 
 function fadeOut() {
     setTimeout(function() {
         loader.classList.toggle("fade-out", true)
+        document.querySelector(".img-title-header > h1").classList.toggle("animate__swing", true);
     }, 7500);
     setTimeout(function() {
         loader.style.display = "none"

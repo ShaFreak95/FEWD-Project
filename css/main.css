@@ -242,6 +242,7 @@ footer p{
 }
 
 .right-nav a {
+    position: relative;
     color: black;
     font-size: 20px;
     text-decoration: none;
@@ -249,7 +250,28 @@ footer p{
 
 .right-nav a:hover {
     color: #44f8ff;
-    text-decoration: underline;
+    /* animation: underlineAnimation 1s ease forwards; */
+    /* text-decoration: underline; */
+}
+
+.right-nav a:hover .underline-animation {
+    position: absolute;
+    animation: underlineAnimation .5s ease forwards;
+}
+
+@keyframes underlineAnimation {
+    0% {
+        border-bottom: 2px solid #44f8ff;
+        width: 0;
+        bottom: 0%;
+        left: 0%;
+    }
+    100% {
+        border-bottom: 2px solid #44f8ff;
+        width: 100%;
+        bottom: 0%;
+        left: 0%;
+    }
 }
 
 .right-nav-list {
@@ -280,13 +302,13 @@ footer p{
     top: 25%;
     left: 25%;
     width: 50%;
-    height: 12%;
+    height: 14%;
 }
 
 .img-container > .img-title-header > h1 {
     font-family: 'Bebas Nue', cursive;
-    font-size: 50px;
-    margin: 2px;
+    font-size: calc(12px + 3vw);
+    margin: 1px;
     text-align: center;
 }
 
@@ -324,10 +346,53 @@ footer p{
     height: 90vh;
     text-align: center;
     position: relative;
-    z-index: -2;
+    z-index: 0;
+    display: flex;
+    align-items: center;
 }
-.form h1 {
+.flip-card-container {
+    /* background-color: #fefefe; */
+    width: 35rem;
+    margin: 0 auto;
+    height: 35rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+.flip-card-inner {
+    box-shadow: 2px 2px 15px black;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: transform .6s;
+    transform-style: preserve-3d;
+}
+.flip-card-container:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, 
+.flip-card-back {
+    background-color: #fefefe;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+.flip-card-front h1 {
     margin: 0;
+    font-size: 3rem;
+}
+.flip-card-front p {
+    margin: 0;
+    font-size: 1.5rem;
 }
 .bg-overlay {
     background-image: url("https://static-cse.canva.com/_next/static/assets/wave.2881x801.e3004027281d91aea8440556fa84fbfd.png");
@@ -344,10 +409,10 @@ footer p{
     margin: 0;
 }
 .contact-form {
-    background-color: #fefefe;
-    box-shadow: 5px 5px 10px black;
+    /* background-color: #fefefe;
+    box-shadow: 5px 5px 10px black; */
     display: inline-block;
-    width: 50%;
+    /* width: 50%; */
 }
 .contact-form .name {
     width: 45%;
@@ -721,10 +786,11 @@ color: #fefefe;
         margin-bottom: 2rem;
     }
 
-    /* Contact */
-    /* #message {
-
-    } */
+    /* *********************Contact Page****************************** */
+    .flip-card-container {
+        height: 30rem;
+    }
+    
 
     /* *********************Number Memory Game Page****************************** */
     .game-section-container {
