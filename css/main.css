@@ -383,6 +383,12 @@ footer p{
     width: 100%;
     justify-content: space-evenly;
 }
+.desktop-view {
+    display: block;
+}
+.mobile-view {
+    display: none;
+}
 .flip-card-back {
     transform: rotateY(180deg);
 }
@@ -790,7 +796,12 @@ color: #fefefe;
     .flip-card-container {
         height: 30rem;
     }
-    
+    .desktop-view {
+        display: none;
+    }
+    .mobile-view {
+        display: block;
+    }
 
     /* *********************Number Memory Game Page****************************** */
     .game-section-container {
